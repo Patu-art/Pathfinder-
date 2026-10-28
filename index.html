@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Pathfinder — Java Career Path Navigator. Assess your Java skills and identify what to learn next.">
+<title>Pathfinder — Java Career Path Navigator</title>
+<style>
+:root{color-scheme:light;--bg:#fff;--surface:#fff;--ink:#171b20;--muted:#657181;--line:#d8dee6;--soft:#f5f7f9;--blue:#1f6f9f;--blue2:#dcebf4;--orange:#d9701a;--green:#2d8a5f;--shadow:0 2px 12px rgba(20,33,61,.045);font-family:"IBM Plex Sans",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.5}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #83bce0;outline-offset:2px}.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav-inner{max-width:1180px;margin:auto;padding:12px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}.brand{font-size:18px;font-weight:800;letter-spacing:-.5px;margin-right:auto}.brand span{color:var(--blue)}.navlinks{display:flex;gap:4px;flex-wrap:wrap}.nav button{border:0;background:transparent;color:#435064;padding:8px 10px;border-radius:6px;font-size:13px}.nav button:hover,.nav button.active{background:var(--blue2);color:#174d70}.wrap{max-width:1180px;margin:0 auto;padding:32px 22px 54px}.hero{max-width:840px;margin:0 auto 24px;border-bottom:2px solid #252a30;padding:12px 0 22px}.eyebrow{text-transform:uppercase;letter-spacing:1.8px;font-size:11px;font-weight:700;color:var(--blue)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(30px,4.3vw,48px);line-height:1.08;letter-spacing:-1.8px;margin:9px 0 12px;font-weight:800;max-width:680px}h2{font-size:23px;line-height:1.2;letter-spacing:-.5px;margin-bottom:8px}h3{font-size:16px;margin-bottom:8px}.hero p{max-width:650px;color:#515d6d;margin:0;font-size:15px}.layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:20px;align-items:start}.panel{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:20px;box-shadow:var(--shadow);min-width:0}.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}.panel-head p{color:var(--muted);font-size:13px;margin:3px 0 0}.step{font-size:11px;color:var(--blue);font-weight:700;background:var(--blue2);border-radius:4px;padding:4px 7px;white-space:nowrap}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px;min-width:0}.field.full{grid-column:1/-1}.field label,.field-label{font-size:12px;font-weight:700;color:#354052}.field input,.field select{width:100%;min-height:40px;border:1px solid #d5dbe3;border-radius:4px;padding:9px 10px;background:white;color:var(--ink)}.field input:focus,.field select:focus{border-color:var(--blue)}.section-label{font-size:13px;font-weight:800;margin:21px 0 9px;padding-bottom:8px;border-bottom:1px solid #e4e8ed}.skill{padding:10px 0 11px;border-bottom:1px solid #edf0f3}.skill:last-child{border-bottom:0}.skill-top{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:13px;font-weight:700}.skill-value{color:var(--blue);font-variant-numeric:tabular-nums}.skill small{display:block;color:var(--muted);font-size:11px;margin:3px 0 6px}.skill input[type=range]{width:100%;accent-color:var(--blue);margin:0;min-height:18px}.scale{font-size:10px;color:var(--muted);margin-top:9px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.btn{border:1px solid var(--line);border-radius:5px;background:#fff;color:var(--ink);font-weight:700;font-size:13px;padding:10px 14px}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn:hover{filter:brightness(.96)}.status{font-size:12px;margin:12px 0 0;color:var(--green);min-height:18px}.scoreline{display:flex;gap:18px;align-items:center;border-bottom:1px solid var(--line);padding:3px 0 18px}.score{font-size:58px;line-height:1;font-weight:800;letter-spacing:-3px;color:var(--blue);font-variant-numeric:tabular-nums}.score-copy strong{display:block;font-size:15px}.score-copy span{font-size:12px;color:var(--muted)}.metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:15px 0}.metric{background:var(--soft);padding:11px;border-radius:5px;min-width:0}.metric span{font-size:10px;color:var(--muted);display:block}.metric strong{font-size:20px;display:block;letter-spacing:-.5px;margin-top:2px}.subhead{font-size:13px;font-weight:800;margin:18px 0 10px}.bars{display:grid;gap:12px}.barrow{display:grid;grid-template-columns:minmax(95px,1.05fr) minmax(50px,1fr) 36px;gap:9px;align-items:center;font-size:11px}.barlabel{overflow-wrap:anywhere}.track{height:8px;background:#e6eaf0;border-radius:9px;position:relative;overflow:hidden}.fill{height:100%;background:var(--blue);border-radius:9px;transition:width .2s}.barvalue{text-align:right;font-variant-numeric:tabular-nums;color:#3b4655}.recommend{border-left:3px solid var(--orange);background:#fffaf5;padding:12px 13px;margin-top:15px;border-radius:0 4px 4px 0}.recommend strong{font-size:12px;display:block;margin-bottom:4px}.recommend p{font-size:12px;color:#505968;margin:0}.history{border-top:1px solid var(--line);margin-top:18px;padding-top:15px}.history-list{display:grid;gap:8px}.history-item{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--soft);padding:9px 10px;border-radius:4px;font-size:11px}.history-item span{color:var(--muted)}.empty{font-size:12px;color:var(--muted);padding:10px 0}.below{max-width:840px;margin:22px auto 0}.below .panel{margin-top:16px}.role-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin-top:13px}.role-card{border:1px solid var(--line);border-radius:5px;padding:12px;min-width:0}.role-card strong{font-size:12px;display:block;margin-bottom:4px}.role-card span{font-size:11px;color:var(--muted)}.footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;color:var(--muted);font-size:11px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.note{font-size:11px;color:var(--muted)}.hidden{display:none!important}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.role-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-inner{padding:10px 16px}.navlinks{width:100%;overflow-x:auto;flex-wrap:nowrap}.nav button{white-space:nowrap}.wrap{padding:23px 16px 38px}.hero{padding-top:4px}.panel{padding:17px}}
+@media(max-width:420px){.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.metric-grid{gap:6px}.metric{padding:9px}.score{font-size:49px}.barrow{grid-template-columns:minmax(80px,1.1fr) minmax(45px,1fr) 32px;gap:7px}.panel{padding:14px}.wrap{padding-left:12px;padding-right:12px}.nav-inner{padding-left:12px;padding-right:12px}.role-grid{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.nav,.actions,.status,.footer button{display:none!important}body{background:white}.wrap{max-width:none;padding:0}.layout{grid-template-columns:1fr 1fr}.panel{box-shadow:none;break-inside:avoid}.hero{margin-bottom:12px}.below{max-width:none}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main navigation"><div class="nav-inner"><div class="brand">path<span>finder</span> <span style="font-weight:500;color:#657181;font-size:12px">/ Java Career Navigator</span></div><div class="navlinks"><button class="active" data-go="top">Navigator</button><button data-go="profile">Profile</button><button data-go="analysis">Analysis</button><button data-go="history">History</button><button id="saveReport">Save report as PDF</button></div></div></nav>
+<main class="wrap" id="top">
+<header class="hero"><div class="eyebrow">Java Career Path Navigator</div><h1>Find your Java skill gaps. Get a plan.</h1><p>Choose a target role, rate your current skills from 0 to 5, and see your readiness score with a clear next step. Your assessment stays on this device.</p></header>
+<div class="layout">
+<section class="panel" id="profile" aria-labelledby="profileTitle"><div class="panel-head"><div><h2 id="profileTitle">Your profile</h2><p>Tell Pathfinder where you are starting from.</p></div><span class="step">01 / ASSESS</span></div>
+<div class="form-grid">
+<div class="field full"><label for="role">Target role</label><select id="role"><option value="backend">Java Backend Developer</option><option value="fullstack">Full Stack Java Developer</option><option value="android">Android Developer (Java)</option><option value="qa">Java QA / Automation Tester</option><option value="junior">Junior Java Developer</option></select></div>
+<div class="field"><label for="name">Name (optional)</label><input id="name" maxlength="60" placeholder="Your name" autocomplete="name"></div>
+<div class="field"><label for="year">Year of study</label><select id="year"><option>1st year</option><option selected>2nd year</option><option>3rd year</option><option>4th year</option><option>Graduate</option></select></div>
+<div class="field"><label for="cgpa">CGPA (optional)</label><input id="cgpa" type="number" min="0" max="10" step=".1" placeholder="e.g. 7.0"></div>
+<div class="field"><label for="hours">Study hours per week</label><input id="hours" type="number" min="1" max="80" value="8"></div>
+<div class="field"><label for="projects">Projects built</label><input id="projects" type="number" min="0" max="100" value="0"></div>
+<div class="field"><label for="months">Months until placement</label><input id="months" type="number" min="1" max="60" value="12"></div>
+</div>
+<div class="section-label">Java and role skills</div><div id="skills"></div><p class="scale">Rating scale: 0 = never heard of it · 1 = know the basics · 2 = can practise with help · 3 = can build a small project · 4 = confident independently · 5 = can explain and teach it.</p>
+<div class="actions"><button class="btn primary" id="submit">Assess my readiness</button><button class="btn" id="reset">Reset ratings</button></div><p class="status" id="status" role="status" aria-live="polite"></p>
+<div class="history" id="history"><div class="panel-head"><div><h3>Recent assessments</h3><p>Your latest saved results on this browser.</p></div><button class="btn" id="clearHistory" style="padding:6px 9px">Clear</button></div><div class="history-list" id="historyList"><p class="empty">No assessments yet. Submit your first profile to begin.</p></div></div>
+</section>
+<section class="panel" id="analysis" aria-labelledby="analysisTitle"><div class="panel-head"><div><h2 id="analysisTitle">Your gap analysis</h2><p id="resultIntro">Your results will appear here after you assess your profile.</p></div><span class="step">02 / RESULTS</span></div>
+<div class="scoreline"><div class="score" id="score">—%</div><div class="score-copy"><strong id="verdict">Ready when you are</strong><span id="scoreCaption">Complete the skill ratings to calculate readiness.</span></div></div>
+<div class="metric-grid"><div class="metric"><span>Skill average</span><strong id="avg">—/5</strong></div><div class="metric"><span>Skills to prioritise</span><strong id="gaps">—</strong></div><div class="metric"><span>Study time / week</span><strong id="weekly">8h</strong></div></div>
+<div class="subhead">Skill level against role expectations</div><div class="bars" id="bars"><p class="empty">Rate the skills on the left, then select “Assess my readiness”. Your skill-by-skill comparison will appear here.</p></div>
+<div class="recommend" id="recommend"><strong>YOUR NEXT STEP</strong><p>Start with an honest self-assessment. Pathfinder will highlight the skills that need the most attention.</p></div>
+<div class="subhead">How to read this result</div><p class="note">The readiness percentage is a simple comparison of your self-ratings with the selected role's target levels. It is a learning guide, not a hiring prediction or a guarantee of employment.</p>
+</section>
+</div>
+<div class="below"><section class="panel"><div class="panel-head"><div><h2>Explore the five target roles</h2><p>Choose a direction that matches what you want to build.</p></div></div><div class="role-grid"><div class="role-card"><strong>Java Backend Developer</strong><span>Core Java, APIs, databases and server logic.</span></div><div class="role-card"><strong>Full Stack Java Developer</strong><span>Frontend interfaces plus Java backend services.</span></div><div class="role-card"><strong>Android Developer</strong><span>Java fundamentals, app lifecycle and UI.</span></div><div class="role-card"><strong>QA / Automation Tester</strong><span>Java basics, test design and automation.</span></div><div class="role-card"><strong>Junior Java Developer</strong><span>Programming foundations and practical projects.</span></div></div></section>
+<footer class="footer"><span>Pathfinder — Java Career Path Navigator</span><span>Self-assessment only · Results stored locally in your browser</span></footer></div>
+</main>
+<script>
+(function(){
+'use strict';
+const SKILLS={
+ core:{name:'Core Java & OOP',desc:'Classes, inheritance, exceptions and generics'},
+ dsa:{name:'Data Structures & Algorithms',desc:'Arrays, lists, maps, trees and problem solving'},
+ db:{name:'SQL & Database Basics',desc:'Queries, joins, tables and relational concepts'},
+ web:{name:'HTML, CSS & JavaScript',desc:'Responsive pages, DOM and browser fundamentals'},
+ api:{name:'HTTP & REST APIs',desc:'Requests, responses, status codes and JSON'},
+ spring:{name:'Spring Boot',desc:'Dependency injection, controllers and configuration'},
+ git:{name:'Git & GitHub',desc:'Commits, branches, pull requests and project history'},
+ test:{name:'Testing & Debugging',desc:'Test cases, debugging and reliable code'},
+ android:{name:'Android Fundamentals',desc:'Activities, layouts and app lifecycle'},
+ automation:{name:'Test Automation',desc:'Automated checks, assertions and test workflows'}
+};
+const ROLES={
+ backend:{name:'Java Backend Developer',skills:{core:4,dsa:3,db:3,api:4,spring:3,git:2,test:2}},
+ fullstack:{name:'Full Stack Java Developer',skills:{core:4,dsa:3,db:3,web:4,api:3,spring:3,git:2,test:2}},
+ android:{name:'Android Developer (Java)',skills:{core:4,dsa:3,android:4,db:2,git:2,test:2,web:1}},
+ qa:{name:'Java QA / Automation Tester',skills:{core:3,dsa:2,db:2,api:3,git:2,test:4,automation:4}},
+ junior:{name:'Junior Java Developer',skills:{core:3,dsa:2,db:2,api:2,git:2,test:2,web:2}}
+};
+const $=id=>document.getElementById(id);
+let ratings={};let lastResult=null;
+function storageGet(key,fallback){try{const v=localStorage.getItem(key);return v?JSON.parse(v):fallback}catch(e){return fallback}}
+function storageSet(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch(e){return false}}
+function currentRole(){return ROLES[$('role').value]||ROLES.backend}
+function renderSkills(){
+ const role=currentRole();
+ $('skills').innerHTML=Object.keys(role.skills).map(key=>{
+  const s=SKILLS[key],value=Number.isInteger(ratings[key])?ratings[key]:0;
+  return '<div class="skill"><div class="skill-top"><label for="skill-'+key+'">'+s.name+'</label><span class="skill-value" id="value-'+key+'">'+value+'/5</span></div><small>'+s.desc+' · role target '+role.skills[key]+'/5</small><input id="skill-'+key+'" data-skill="'+key+'" type="range" min="0" max="5" step="1" value="'+value+'" aria-label="'+s.name+' rating"></div>';
+ }).join('');
+ $('skills').querySelectorAll('[data-skill]').forEach(el=>el.addEventListener('input',()=>{
+  ratings[el.dataset.skill]=Number(el.value);$('value-'+el.dataset.skill).textContent=el.value+'/5';
+ }));
+}
+function safeNum(id,min,max,defaultValue){const n=Number($(id).value);return Number.isFinite(n)&&n>=min&&n<=max?n:defaultValue}
+function calculate(){
+ const role=currentRole(),entries=Object.entries(role.skills);
+ const total=entries.reduce((sum,[key])=>sum+(Number(ratings[key])||0),0);
+ const max=entries.reduce((sum,[,need])=>sum+need,0);
+ const percent=max?Math.round(total/max*100):0;
+ const gaps=entries.map(([key,need])=>({key,name:SKILLS[key].name,have:Number(ratings[key])||0,need,gap:Math.max(0,need-(Number(ratings[key])||0))})).sort((a,b)=>b.gap-a.gap);
+ return {role:role.name,percent,total,max,avg:(total/entries.length).toFixed(1),gaps,profile:{name:$('name').value.trim().slice(0,60),year:$('year').value,cgpa:$('cgpa').value,hours:safeNum('hours',1,80,8),projects:safeNum('projects',0,100,0),months:safeNum('months',1,60,12)},date:new Date().toISOString()};
+}
+function draw(result){
+ $('score').textContent=result.percent+'%';$('avg').textContent=result.avg+'/5';$('gaps').textContent=result.gaps.filter(x=>x.gap>0).length;$('weekly').textContent=result.profile.hours+'h';
+ $('resultIntro').textContent=(result.profile.name?result.profile.name+"'s results":"Your results")+" for "+result.role+".";
+ const verdict=result.percent>=80?'Strong foundation':result.percent>=55?'Building momentum':result.percent>=30?'Keep building the basics':'Start with the fundamentals';
+ $('verdict').textContent=verdict;$('scoreCaption').textContent='Based on '+result.gaps.length+' role-related skills · '+result.total+'/'+result.max+' points';
+ $('bars').innerHTML=result.gaps.map(item=>'<div class="barrow"><span class="barlabel">'+item.name+'</span><div class="track" role="img" aria-label="'+item.have+' out of '+item.need+' required"><div class="fill" style="width:'+Math.min(100,item.have/5*100)+'%"></div></div><span class="barvalue">'+item.have+'/'+item.need+'</span></div>').join('');
+ const priorities=result.gaps.filter(x=>x.gap>0).slice(0,3);
+ $('recommend').innerHTML='<strong>YOUR NEXT STEP</strong><p>'+(priorities.length?'Prioritise '+priorities.map(x=>x.name).join(', ')+'. Work on the first gap, practise it in a small project, then reassess.':'Your ratings meet or exceed these role targets. Build a portfolio project and practise explaining your design choices.')+'</p>';
+}
+function historyItems(){const h=storageGet('pathfinder-history',[]);return Array.isArray(h)?h:[]}
+function drawHistory(){
+ const list=historyItems();
+ $('historyList').innerHTML=list.length?list.slice(0,5).map((x,i)=>'<div class="history-item"><div><strong>'+(escapeText(x.role))+'</strong><br><span>'+escapeText(x.dateLabel||'Previous assessment')+'</span></div><strong>'+Number(x.percent||0)+'% ready</strong></div>').join(''):'<p class="empty">No assessments yet. Submit your first profile to begin.</p>';
+}
+function escapeText(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function submit(){
+ for(const [key] of Object.entries(currentRole().skills)){const el=$('skill-'+key);if(el)ratings[key]=Number(el.value)}
+ const result=calculate();lastResult=result;draw(result);
+ const history=historyItems();history.unshift({role:result.role,percent:result.percent,date:result.date,dateLabel:new Date(result.date).toLocaleString()});storageSet('pathfinder-history',history.slice(0,10));drawHistory();
+ $('status').textContent='Assessment saved on this browser. Your readiness score is '+result.percent+'%.';
+ $('analysis').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+}
+$('role').addEventListener('change',()=>{renderSkills();$('status').textContent='Role changed. Review the ratings and assess again.'});
+$('submit').addEventListener('click',submit);
+$('reset').addEventListener('click',()=>{ratings={};renderSkills();$('status').textContent='Ratings reset. Submit when you are ready.'});
+$('clearHistory').addEventListener('click',()=>{try{localStorage.removeItem('pathfinder-history')}catch(e){}drawHistory();$('status').textContent='Assessment history cleared from this browser.'});
+$('saveReport').addEventListener('click',()=>window.print());
+document.querySelectorAll('[data-go]').forEach(btn=>btn.addEventListener('click',()=>{const target=btn.dataset.go==='top'?'top':btn.dataset.go;document.getElementById(target).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});document.querySelectorAll('[data-go]').forEach(b=>b.classList.toggle('active',b===btn))}));
+renderSkills();drawHistory();
+})();
+</script>
+</body>
+</html>
